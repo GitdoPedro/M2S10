@@ -1,0 +1,20 @@
+JWT (JSON Web Token) é um padrão aberto para transmitir informações com segurança entre duas partes em formato JSON.
+Ele é geralmente usado como um mecanismo de autenticação e autorização em sistemas web.
+O JWT é composto por um cabeçalho, um payload e uma assinatura, que são usados para verificar a autenticidade do token. 
+O JWT é usado para autenticar usuários, compartilhar recursos e integrar com APIs externas.
+O funcionamento do JWT é simples: o servidor gera um token que contém as informações do usuário, que é enviado para o cliente.
+O cliente armazena o token e o envia em todas as requisições subsequentes, permitindo que o servidor verifique a autenticidade do usuário.
+
+
+Passo a passo de uma requisição que utiliza JWT:
+
+O usuário faz login no sistema web, fornecendo suas credenciais de acesso (como email e senha).
+O servidor autentica as credenciais e cria um JWT com as informações do usuário (como id, nome e permissões), usando uma chave secreta compartilhada entre o servidor e o cliente.
+O servidor envia o JWT para o cliente, que o armazena no navegador (geralmente em um cookie ou no armazenamento local).
+O cliente inclui o JWT em todas as requisições subsequentes, adicionando-o como um cabeçalho HTTP (como "Authorization: Bearer <token>").
+O servidor verifica se o JWT é válido e decodifica o payload para obter as informações do usuário.
+O servidor processa a requisição e retorna a resposta para o cliente.
+
+
+exemplo: 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IlBlZHJvIExpbWEiLCJpYXQiOjE1MTYyMzkwMjJ9._59pFzKhzCu3TXlWmp92xiAW97XYIg_fgfs95Zy-L7w
